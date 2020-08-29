@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import './App.scss'
+
+import NewsletterList from './components/Newsletter/NewsletterList/NewsletterList'
+import Input from './components/Input/Input'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<main className='newsletter-container'>
+			<div className='flex-container wrapper'>
+				<NewsletterList />
+				<section className='newsletter-subscribe'>
+					<Input />
+					<section className='input-checkbox'>
+						<input
+							type='checkbox'
+							id='receive-news'
+							name='scales'
+							required
+							autoFocus
+						/>
+						<label htmlFor='receive-news'>
+							I do not want to receive information about future newsletters.
+						</label>
+					</section>
+				</section>
+			</div>
+		</main>
+	)
 }
 
-export default App;
+export default App

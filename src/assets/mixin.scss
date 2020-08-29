@@ -1,0 +1,22 @@
+@mixin flex {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+@mixin boxshadow {
+	box-shadow: 0 10px 25px 10px rgba(0, 0, 0, 0.1);
+	-webkit-transform: translateY(-5px);
+	transform: translateY(-5px);
+	-webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+	transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+@mixin top-boxshadow {
+	-webkit-box-shadow: -2px -11px 10px -5px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: -2px -11px 10px -5px rgba(0, 0, 0, 0.5);
+	box-shadow: -2px -11px 10px -5px rgba(0, 0, 0, 0.5);
+}
+
+@mixin font-size {
+	font-size: calc(16px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+}

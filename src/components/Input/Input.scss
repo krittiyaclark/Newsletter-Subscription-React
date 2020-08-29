@@ -1,0 +1,45 @@
+@import '../../assets/color.scss';
+@import '../../assets/mixin.scss';
+
+.form-control {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+
+	@include font-size;
+	font-weight: 400;
+	color: $mainLighterGrey;
+	width: 431px;
+	max-width: 1170px;
+	height: 58px;
+	margin: 0 auto;
+	padding: 10px;
+	border: 1px solid $mainLighterGrey;
+	background: $mainWhite;
+	border-radius: 5px;
+	line-height: 1.5;
+}
+
+.button {
+	cursor: pointer;
+	background-color: $mainBlue;
+	border: none;
+	border-radius: 5px;
+	color: $mainWhite;
+	@include boxshadow;
+	margin: 21px 0 21px;
+	text-transform: uppercase;
+	@include font-size;
+	letter-spacing: 1px;
+	line-height: 1.5;
+	width: 431px;
+	max-width: 1170px;
+	height: 58px;
+
+	&:hover {
+		background-color: $mainDarkBlue;
+		transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+			border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+	}
+}

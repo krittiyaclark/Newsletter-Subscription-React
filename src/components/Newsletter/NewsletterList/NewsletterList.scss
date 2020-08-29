@@ -1,0 +1,25 @@
+@import '../../../assets/mixin.scss';
+
+.newsletter-list {
+	@include flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 56px;
+
+	#newsletter-header {
+		justify-content: center;
+		align-content: center;
+		padding: 31px;
+	}
+
+	.newsletter-title {
+		font-size: 35px;
+		font-weight: 400;
+		padding: 0 0 26px;
+		text-align: center !important;
+	}
+
+	.newsletter-subTitle {
+		letter-spacing: 1px;
+	}
+}

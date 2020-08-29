@@ -1,0 +1,127 @@
+@import './assets/color.scss';
+@import './assets/mixin.scss';
+
+.newsletter-container {
+	height: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: 0 auto;
+
+	.newsletter-subscribe {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-end;
+		height: 271px;
+		@include top-boxshadow;
+		padding: 21px 0 79px;
+	}
+
+	.input-checkbox {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+
+	.wrapper {
+		margin: auto;
+		display: flex;
+		flex-direction: column;
+		max-width: 725px;
+		background-color: $mainWhite;
+		border-radius: 10px;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	}
+
+	#email {
+		width: 100%;
+	}
+
+	#receive-news {
+		margin-right: 13px;
+	}
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width: 320px) {
+	.newsletter-subscribe {
+		padding: 31px;
+
+		.form-control,
+		.button {
+			width: 100%;
+		}
+	}
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media (min-device-width: 320px) {
+	.newsletter-container {
+		// width: 100%;
+		// height: 100vh;
+		flex-flow: row nowrap;
+		flex-basis: 100%;
+
+		.wrapper {
+			margin: auto;
+			display: flex;
+			flex-direction: column;
+		}
+
+		.newsletter-subscribe {
+			padding: 31px;
+
+			.form-control,
+			.button {
+				width: 100%;
+			}
+		}
+	}
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width: 321px) {
+	.newsletter-container {
+		// height: 100vh;
+		flex-flow: row nowrap;
+
+		.wrapper {
+			margin: auto;
+			display: flex;
+			flex-direction: column;
+		}
+
+		.newsletter-subscribe {
+			padding: 20px;
+			margin-bottom: 56px;
+		}
+	}
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width: 320px) {
+	.newsletter-container {
+		// height: 100vh;
+		display: grid;
+		width: 100%;
+		height: 100vh;
+		background-color: $mainWhite;
+		grid-column: 1;
+		grid-row: 1;
+		flex-flow: row nowrap;
+
+		.newsletter-subscribe {
+			padding: 20px;
+			margin-bottom: 56px;
+		}
+	}
+}
+
+@media screen and (min-width: 640px) {
+	.flex-container {
+		display: flex;
+		flex-direction: column;
+	}
+}
