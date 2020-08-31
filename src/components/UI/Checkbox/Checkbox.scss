@@ -1,0 +1,52 @@
+@import '../../../assets/color.scss';
+
+label {
+	display: contents;
+	position: relative;
+	cursor: pointer;
+	user-select: none;
+
+	input[type='checkbox'] {
+		position: absolute;
+		opacity: 0;
+		cursor: pointer;
+		height: 0;
+		width: 0;
+	}
+
+	.check {
+		position: absolute;
+		border-radius: 50%;
+		border: 1px solid $mainLighterGrey;
+		height: $checkDimensions;
+		width: $checkDimensions;
+		background-color: $checkBg;
+		margin: 16px 0 16px;
+
+		&:after {
+			content: '';
+			display: none;
+			border: 5px solid $checkActive;
+			border-top: none;
+			border-right: none;
+			position: absolute;
+			height: 10px;
+			left: 11px;
+			top: 16px;
+			transform: rotate(-45deg);
+			width: 24px;
+		}
+	}
+
+	&:hover input[type='checkbox'] ~ .check {
+		background-color: $checkBgHover;
+	}
+
+	input[type='checkbox']:checked ~ .check {
+		border: 2px solid $checkActive;
+	}
+
+	input[type='checkbox']:checked ~ .check:after {
+		display: block;
+	}
+}

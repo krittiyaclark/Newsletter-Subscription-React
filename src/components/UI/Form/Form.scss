@@ -1,0 +1,92 @@
+@import '../../../assets//color.scss';
+@import '../../../assets/mixin.scss';
+
+form.form-control {
+	display: flex;
+	flex-direction: column;
+	max-width: 431px;
+	margin: 0 auto;
+
+	label {
+		margin: 0.45rem 0;
+	}
+
+	input[type='email'] {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+
+		@include font-size;
+		font-weight: 400;
+		width: 100%;
+		max-width: 1170px;
+		height: 58px;
+		margin: 0 auto;
+		padding: 0 1rem;
+		border: 1px solid $mainLighterGrey;
+		background: $mainWhite;
+		line-height: 1.5;
+		transition: background 0.3s;
+
+		&:not(:disabled) {
+			border: 2px solid lightslategray;
+			border-radius: 5px;
+			transition: border 100ms ease;
+
+			&:focus {
+				outline: none;
+			}
+
+			&::placeholder {
+				color: $mainLighterGrey;
+			}
+		}
+	}
+
+	button[type='submit'] {
+		cursor: pointer;
+		background-color: $mainBlue;
+		border: none;
+		border-radius: 5px;
+		color: $mainWhite;
+		@include boxshadow;
+		margin: 21px 0 21px;
+		text-transform: uppercase;
+		@include font-size;
+		letter-spacing: 1px;
+		line-height: 1.5;
+		width: 100%;
+		max-width: 1170px;
+		height: 58px;
+
+		&:hover {
+			background-color: $mainDarkBlue;
+			transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+				border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+		}
+	}
+}
+
+.input-error {
+	border: 2px solid red !important;
+}
+
+.success {
+	display: block;
+	@include border-radius;
+	background: $mainGreen;
+	color: $mainWhite;
+	text-align: center;
+	width: 100%;
+}
+
+.error {
+	display: block;
+	background: $mainRed;
+	@include border-radius;
+	color: $mainWhite;
+	font-size: 18px;
+	text-align: center;
+	width: 100%;
+}

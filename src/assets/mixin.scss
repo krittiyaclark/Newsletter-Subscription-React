@@ -18,5 +18,10 @@
 }
 
 @mixin font-size {
-	font-size: calc(16px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+	font-size: calc(20px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+}
+
+@mixin border-radius {
+	border-radius: 5px;
+	padding: 0.5rem;
 }

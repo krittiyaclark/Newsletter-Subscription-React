@@ -11,7 +11,7 @@
 	}
 
 	.newsletter-item {
-		margin-bottom: 32px;
+		margin-bottom: 88px;
 
 		figure {
 			width: 100%;
@@ -32,51 +32,9 @@
 		}
 	}
 
-	.round {
-		position: relative;
-		justify-self: center;
-		align-self: center;
-
-		label {
-			background-color: $mainLightGrey;
-			border-radius: 100%;
-			border: 1px solid $mainGrey;
-			border-radius: 50%;
-			cursor: pointer;
-			width: 50px;
-			height: 50px;
-			left: 0;
-			position: absolute;
-			top: 0;
-
-			&:after {
-				border: 3px solid $mainBlue;
-				border-top: none;
-				border-right: none;
-				content: '';
-				height: 11px;
-				left: 10px;
-				opacity: 0;
-				position: absolute;
-				top: 16px;
-				transform: rotate(-45deg);
-				width: 24px;
-			}
-		}
-
-		input[type='checkbox'] {
-			visibility: hidden;
-		}
-
-		input[type='checkbox']:checked + label {
-			background-color: $mainLightGrey;
-			border-radius: 100%;
-			border: 2px solid $mainBlue;
-		}
-
-		input[type='checkbox']:checked + label:after {
-			opacity: 1;
-		}
+	.input-control {
+		display: flex;
+		justify-content: center;
 	}
 }
 
@@ -84,7 +42,6 @@
 @media only screen and (min-width: 321px) {
 	.newsletter-item {
 		display: grid;
-		// grid-template-columns: 2fr 3fr 1fr;
 		grid-column-gap: 1rem;
 
 		.info {
@@ -94,7 +51,6 @@
 
 			h3,
 			p {
-				justify-self: center;
 				align-self: center;
 			}
 		}
@@ -160,7 +116,6 @@
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
 	.newsletter-item {
 		display: grid;
-		// grid-template-columns: 2fr 3fr 1fr;
 		width: 100%;
 
 		.info {
@@ -195,7 +150,6 @@
 
 			h3,
 			p {
-				justify-self: center;
 				align-self: center;
 			}
 		}

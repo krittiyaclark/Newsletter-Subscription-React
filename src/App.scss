@@ -21,8 +21,7 @@
 
 	.input-checkbox {
 		display: flex;
-		flex-direction: row;
-		align-items: center;
+		justify-content: center;
 	}
 
 	.wrapper {
@@ -56,35 +55,9 @@
 	}
 }
 
-/* Smartphones (portrait and landscape) ----------- */
-@media (min-device-width: 320px) {
-	.newsletter-container {
-		// width: 100%;
-		// height: 100vh;
-		flex-flow: row nowrap;
-		flex-basis: 100%;
-
-		.wrapper {
-			margin: auto;
-			display: flex;
-			flex-direction: column;
-		}
-
-		.newsletter-subscribe {
-			padding: 31px;
-
-			.form-control,
-			.button {
-				width: 100%;
-			}
-		}
-	}
-}
-
 /* Smartphones (landscape) ----------- */
 @media only screen and (min-width: 321px) {
 	.newsletter-container {
-		// height: 100vh;
 		flex-flow: row nowrap;
 
 		.wrapper {
@@ -103,7 +76,6 @@
 /* Smartphones (portrait) ----------- */
 @media only screen and (max-width: 320px) {
 	.newsletter-container {
-		// height: 100vh;
 		display: grid;
 		width: 100%;
 		height: 100vh;
