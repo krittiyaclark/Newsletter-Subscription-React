@@ -5,18 +5,21 @@ Stack: HTML5, CSS3, React, Netlify
 ### Clone a project
 
 `git clone https://github.com/krittiyaclark/Newsletter-Subscription-React.git`
+
+Go to a project directory
+
 `cd project`
 
-## Install dependencies
+### Install dependencies
 
 `npm install or yarn`
 
-## Start an application
+### Start an application
 
 In the project directory, you can run: `npm start` or `yarn start`
 
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-### Live project
+#### Live project
 
 [Live project](https://newsletter-subscription-react.netlify.app/)
