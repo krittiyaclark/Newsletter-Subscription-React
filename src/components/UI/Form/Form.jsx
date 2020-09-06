@@ -17,28 +17,30 @@ function Form() {
 	const [successMessage, setSuccessMessage] = useState(null)
 
 	// To reset state after form submission.
-	const postSubmissionReset = () => {
+	const postSubmissionReset = async () => {
 		setEmail('')
 		setErrorMessage('')
 		toggleInProgress(false)
 
 		// Remove a message
-		wait(2000).then(() => setSuccessMessage(''))
+		await wait(2000)
+		await setSuccessMessage('')
 	}
 
 	// To reset state when form values are invalid.
-	const invalidFormReset = () => {
+	const invalidFormReset = async () => {
 		toggleInProgress(false)
 		setSuccessMessage(null)
 		setErrorMessage('Invalid Email!')
 		setEmail('')
 
 		// Remove a message
-		wait(2000).then(() => setErrorMessage(''))
+		await wait(2000)
+		await setErrorMessage('')
 	}
 
 	// Handles form submission process.
-	const handleSubmit = (e) => {
+	const handleSubmit = async (e) => {
 		e.preventDefault()
 		toggleInProgress(true)
 
@@ -54,7 +56,8 @@ function Form() {
 		}
 
 		// Wait for 2 seconds before setting a post submission message.
-		wait(2000).then(processSubmission)
+		await wait(2000)
+		await processSubmission()
 	}
 
 	// Event handler to respond to real time email input changes.
@@ -72,12 +75,16 @@ function Form() {
 	useEffect(() => {
 		// To reset classNames when email is not entered
 		// or being removed after typing.
-		if (!email.length) {
-			setEmailClass('')
+		const message = async () => {
+			if (!email.length) {
+				setEmailClass('')
+			}
+			// Remove a message
+			await wait(2000)
+			await setSuccessMessage('')
 		}
 
-		// Remove a message
-		wait(2000).then(() => setSuccessMessage(''))
+		message()
 	}, [email])
 
 	return (
